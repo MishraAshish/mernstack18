@@ -13,15 +13,15 @@ To Clone in your own machine -
 
 go to any directory where you want to clone and run below
 
-git clone https://github.com/MishraAshish/MERNStack17.git
+git clone https://github.com/MishraAshish/mernstack18.git
 
 To run the node api
-MERNStack17
+MERNStack18
 cd - node-server
 run  - npm i
 then - npm start
 
-MERNStack17
+MERNStack18
 cd - reactapp
 run  - npm i
 then - npm start
@@ -54,5 +54,11 @@ git init
 git add README.md
 git add . 
 git commit -m "first commit"
-git remote add origin https://github.com/MishraAshish/MERNStack17.git
+git remote add origin https://github.com/MishraAshish/MERNStack18.git
+git push origin master
+
+
+Next time to commit and push we follow -
+git add . 
+git commit -m "subsequent commits"
 git push origin master
