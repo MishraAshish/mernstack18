@@ -17,11 +17,11 @@ function Parent(userName, userPin) {
     var accountBalance = "$20000" // public - on authentication success
     var accountPassword = "32gfc79s0dd" //private - shouldn't be accesses outside
     
-    var child = function(getBalance) {
+    var child = function(getBalance) { //getBalance - is the parameted for child function
         //Public scope which is accessible to others
         if (getBalance && name==userName && pin==userPin) {
             return {
-                name : name,
+                name : name, //key value pair 
                 accountName : accountName,
                 accountBalance : accountBalance
             }
@@ -34,7 +34,7 @@ function Parent(userName, userPin) {
 
 var child = Parent("David", "25694158") //balanceInfo
 
-console.log(child(true))
+console.log(child(true)) //bool value for getBalance - parameter
 
 
 //create a sample of your own implementation for closure
