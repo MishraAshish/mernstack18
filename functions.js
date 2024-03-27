@@ -24,7 +24,10 @@ function UserName(params) {
 UserName("Ramant") // it executes in global scope - this (global object, execution context)
 
 //2. Function Expression - when we assign func definition to a var its termed as Function Expression
-console.log(validUser(5,9)); //test it and see
+
+//console.log(validUser)
+
+//console.log(validUser(5,9)); //test it and see
 
 var validUser = function (a, b) {
     return a + b
@@ -49,10 +52,10 @@ console.log(validUser(5,9));
 
 //4. Constructor Function : Is used to create a class like structure using functions
 
-function Area(length, width, radius ){
-    this.length = length,
-    this.width = width,
-    this.radius = radius,
+function Area(length, width, radius){
+    this.length = length
+    this.width = width
+    this.radius = radius
 
     this.rectangle = function () {
         return this.length * this.width
@@ -72,3 +75,7 @@ var areaObj = new Area(2, 5, 10) // initialzied as constructor
 console.log(areaObj.rectangle()) //executes in the context of Area (constructor function object/ class)
 console.log(areaObj.square())
 console.log(areaObj.circle())
+
+var areaObj = new Area(20, 50, 30)
+
+//this - is reserved keyword used to define the scope and execution context or dynamic context for js function/object
