@@ -1,7 +1,8 @@
-//Inheritance
+//Inheritance - 
 //Encapsulation - Private, Public, internal, protected,...
-//Polymorphism
-//Abstarction
+//Polymorphism - 
+//Abstarction - not present in javascript
+
 //Encapsulation - access modifiers : in languages like java help us to prevent/limit the usage of class members
 
 //In Javascript : When we have a function within a function and parent function returns child function, 
