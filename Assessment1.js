@@ -1,5 +1,5 @@
 //March - MERNStack Session - Assessment Number 1
-//Q1. Create a file with name basics and show all the features that you know about javascript
+//Q1. Create a file with name basics and show all the features that you know about javascript? Explain in 1-2 line statements 
 //Q2. As javascript is not a type safe and has auto cast feature - try showing below values from the same variable
 // and its type as well :values are - "Robert ", .0266, false, {myname : "Test Me"}, 25166665, undefined, true, "Robert Jr.", null, {}, -32767
 
@@ -10,9 +10,9 @@
 // below output needs to be monitored - add(2,3,4), add(2), add(2.3,3), add("first", 2, "three")
 // analyse the outputs we got and try explaining the reasons behind
 
-//Q5. Give me an example of your choice on closure, objects, prototype, each.
+//Q5. Give me an example of your choice on closure, hoisting, constructor function, each.
 
-//Q8. what will the following code output? why?
+//Optional Question - what will the following code output? why?
 
 // var arr = [10, 12, 15, 21];
 // for (var i = 0; i < arr.length; i++) {
