@@ -10,7 +10,12 @@ function GetUserInfo(firstName, lastName, printCallBk) {
     printCallBk("User Details are ", firstName, lastName)   //callback function executes to give desired result
 }
 
-GetUserInfo("David", "Miller", PrintDetails)
+for (let index = 0; index < 200; index++) {
+    setTimeout(function () {
+        GetUserInfo("David", "Miller", PrintDetails)    
+    }, 2000) //400 seconds
+}
+
 
 function GetSesionInfo(sessionName, sessionTopic, printCallBk) {
     printCallBk("Session details are ", sessionName, sessionTopic)    
