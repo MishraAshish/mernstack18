@@ -37,7 +37,8 @@ arr.newKey = "Sierra"
 
 console.log("For Of Loop") 
 let cars = ['BMW', 'Volvo', 'Mini']; 
-cars[3] = "Toyota"
+cars[5] = "Toyota"
+
 
 //cars.newCar = "Tesla" //Array with key not based on index for of loop will not support for that value
 
