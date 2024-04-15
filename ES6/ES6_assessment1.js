@@ -17,7 +17,6 @@
 // ]
 
 //2. Use the spread and rest operator to create a function which can multiply numbers from 1...n (n is the number of choice)
-//   also need to print students of the session using same example
 
 //3. Print the last name through destructuring and add a contact number:9119119110 as well
 // const person = {
