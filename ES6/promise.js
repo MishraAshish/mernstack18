@@ -15,7 +15,7 @@ function LoginProcess(userId, password) {
 
     function Authentication(userInfo, Authorization) {
         
-        let userSession = Authentication_API(userInfo)
+        let userSession = Authentication_API(userInfo) //call to backend
 
         if(userSession==valid) //
             Authorization(userInfo, userSession, Navigation)
