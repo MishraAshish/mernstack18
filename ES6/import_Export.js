@@ -14,7 +14,7 @@ export let UserInfo = ()=>{
 export const pi = 3.141
 export const xi = 9.18
 export const refKey = 5.25
-export let UserInfo = 200000
+//export let UserInfo = 200000
 
 //OurFile.js
 
