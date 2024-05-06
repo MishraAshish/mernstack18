@@ -8,6 +8,8 @@ const port = 9000//
 const defaultRouter = require("./Routers/defaultRoute")
 const adminRouter = require("./Routers/adminRoute")
 
+global.rootDir = __dirname;
+
 //we can have one main and multiple other express apps at a place
 const adminApp = express(); // a new express app to handle requests mounted with admin in path
 

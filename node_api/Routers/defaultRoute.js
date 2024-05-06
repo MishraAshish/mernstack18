@@ -50,7 +50,7 @@ defaultRouter.get('/', function (req, res) {
   
   
   defaultRouter.get('/getalert', function (req, res) {
-      res.sendFile(__dirname+"/Public/index.html")
+      res.sendFile(global.rootDir+"/Public/index.html")
   })
   
   // a hack to handle static files but a feasible approach
