@@ -1,42 +1,60 @@
 import React, { Component } from "react";
 import "./test.css";
 import TestComponent from "./CommonComponent/test";
+import Home from "./CommonComponent/HomeComponent";
+import Footer from "./CommonComponent/FooterComponent";
 
 export default class ApplicationComponent extends Component {
 
+    //props - is the set of properties html + js which needs to be available in every component
+    // also a parent component can share data to child using props
+    constructor(props){
+        super(props);//syncs the props values to parent/base class
+
+        //define the state and initialize the state
+        this.state = {
+            name : "Suyash Talekar!!!"
+        }
+    }
+
+    updateName = (evt)=>{
+
+        alert("Updating the name!!")
+
+        // let nameElem = document.getElementById("name_element")
+        // nameElem.innerText = "Yao"
+        //nameElem.innerText = "David"
+
+
+        // this.state.name = "Alieen"
+        // console.log(this.state.name)
+
+        //update state to create new virtual dom using setState - api
+
+        this.setState({
+            name : "David Hwang"
+        })
+
+
+        evt.preventDefault()
+    }
+
     render(){
-        let name = "Suyash Talekar!!!"
+        //let name = "Suyash Talekar!!!"
         return(
             <div className="topdiv">
                 <h4>This is main react application Component</h4>
-                <b id="name_element">{name}</b>
-                {/* <form>
-                <div className="col-md-12">
-                    <label className="col-md-4">User Name</label>
-                    <input className="col-md-6" type="text" maxLength={14} 
-                        placeholder="Please type here user name..."></input>
-                    
-                    <hr/>
-                    <input className="col-md-6" type="email" maxLength={14} 
-                        placeholder="Please type here email..."></input>
 
-                    <hr/>   
-                    <input className="col-md-6" type="tel" maxLength={14} 
-                        placeholder="Please type here telephone..."></input>
-                    <hr/>
-                    <input className="col-md-6" type="date" maxLength={14} 
-                        placeholder="Please type here telephone..."></input>
-                    <hr/>
-                    <input className="col-md-6" type="checkbox" maxLength={14} 
-                        placeholder="Please type here telephone..."></input>
-                    <hr/>
-                    <input className="col-md-6" type="color" maxLength={14} 
-                        placeholder="Please type here telephone..."></input>
-                    <hr/>
-                        <button type="submit">Submit</button>
-                </div>
-                </form> */}
+                <h5><b id="name_element">{this.state.name}</b></h5>
+
+                <Home parentName={this.state.name}/>
+                {/* 
                 <TestComponent/>
+                
+
+                <Footer/> */}
+
+                <button onClick={this.updateName} >Update Name</button>
             </div>
         )
     }
