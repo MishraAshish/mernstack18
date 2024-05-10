@@ -21,3 +21,16 @@ h4 {
     border-radius: 5%;
     border: 5px solid gray;
 }
+
+.button{
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(255, 196, 0);
+    border: 1px solid red;
+    border-radius: 5%;
+    margin: 10px;
+}
+
+.active{
+    background-color: aquamarine;
+}

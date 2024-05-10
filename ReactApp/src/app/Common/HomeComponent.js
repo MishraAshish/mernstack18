@@ -10,3 +10,6 @@ let Home = (props)=>{
 }
 
 export default Home;
+
+//class component 
+//life cycle methods
