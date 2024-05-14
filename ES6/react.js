@@ -25,3 +25,17 @@
 
 //use diffing algorithm, to compare the new virtual dom with acutal dom, dfs
 //if change is there, just replace the node instead of re-rendering the html
+
+
+
+//react - class components and component life cycle methods =>  Component
+
+//a. creation life cycle
+    // 1.> consturctor - initiliaze 
+
+// update life cycle
+
+// destruction life cycle
+
+
+//CreateBrowerRouter and BrowserRouter
