@@ -39,3 +39,9 @@
 
 
 //CreateBrowerRouter and BrowserRouter
+
+//redux -
+// store, reducer, actions, dispatcher
+
+//react-redux -
+// api's to read store - <mapStateToProps, mapDispatchToProps> hooks <useSelector, useDispatch>

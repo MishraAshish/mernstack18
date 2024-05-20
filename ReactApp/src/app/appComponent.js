@@ -8,6 +8,7 @@ import Footer from "./Common/FooterComponent";
 import Header from "./Common/HeaderComponent";
 import About from "./Common/AboutComponent";
 import NotFound from "./Common/NotFoundComponent";
+import UserComponent from "./Application/User/UserComponent";
 
 export default class ApplicationComponent extends Component {
 
@@ -56,6 +57,7 @@ export default class ApplicationComponent extends Component {
                             updateNameInParent={this.updateName} />}/>
                     <Route path="home" element={<Home  parentName1={this.state.name}
                             updateNameInParent={this.updateName} />}/>
+                    <Route path="user" element={<UserComponent />}/>
                     <Route path="about" element={<About />}/>
                     <Route path="about/:id" element={<About />}/>
                     <Route path="*" element={<NotFound />}/>                    
