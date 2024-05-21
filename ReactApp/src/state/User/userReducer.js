@@ -1,5 +1,5 @@
 
-import * as actionTypes from "./userAction";
+import * as actionTypes from "../actionTypes";
 
 let initialState = {
     user : {
@@ -13,6 +13,8 @@ let initialState = {
 // action => type and payload
 
 let userReducer = (state=initialState, action)=>{
+
+    console.log("User Actions ", action)
 
     switch (action.type) {
 

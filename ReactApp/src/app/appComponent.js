@@ -8,7 +8,7 @@ import Footer from "./Common/FooterComponent";
 import Header from "./Common/HeaderComponent";
 import About from "./Common/AboutComponent";
 import NotFound from "./Common/NotFoundComponent";
-import UserComponent from "./Application/User/UserComponent";
+import UserComponent from "./Application/User/UserContainer";
 
 export default class ApplicationComponent extends Component {
 
@@ -50,7 +50,7 @@ export default class ApplicationComponent extends Component {
         return(
             <Router>
                 <div className="topdiv">
-                <b>userName : {this.state.name}</b>
+                {/* <b>userName : {this.state.name}</b> */}
                 <Header userName={this.state.name}/>
                 <Routes>
                     <Route path="/" element={<Home  parentName1={this.state.name} 

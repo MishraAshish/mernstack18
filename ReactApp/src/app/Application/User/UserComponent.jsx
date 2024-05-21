@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
+//import { connect } from "react-redux";
+//import { AddUserToStore } from "../../../state/User/userAction";
 
-class UserComponent extends Component{
+
+export default class UserComponent extends Component{
 
     constructor(props){
         super(props);
@@ -35,6 +37,9 @@ class UserComponent extends Component{
     loginUser = (evt)=>{        
         let newUser = this.state;
         alert("Logged Innn -"+JSON.stringify(newUser))
+
+        //upon user action to login we send user to store
+        this.props.addUser(newUser);
 
         evt.preventDefault();
     }
@@ -84,12 +89,22 @@ class UserComponent extends Component{
 
 //mapstatetoprops -- allows component to become subscriber
 
-let mapStateToProps = (store) => { //store is the redux states
-    return {
-        user : store.userReducer.user
-    }
-}
+// let mapStateToProps = (store) => { //store is the redux states
+//     return {
+//         user : store.userReducer.user
+//     //user - will be accessed as props.user in component
+//     }
+// }
 
-//mapDispatchToProps -- allows us to send data back to store to update in reducer
+// //mapDispatchToProps -- allows us to send data back to store to update in reducer
+// let mapDispatchToProps = (dispatch)=>{
+//     return {
+//         addUser : (user)=>{
+//             dispatch(AddUserToStore(user))
+//         }
+//     }
+// }
 
-export default connect(mapStateToProps, null)(UserComponent)
+
+// //connect accepts - mapStateToProps - for subscribing and mapDispatchToProps - for publishing
+// export default connect(mapStateToProps, mapDispatchToProps)(UserComponent)
