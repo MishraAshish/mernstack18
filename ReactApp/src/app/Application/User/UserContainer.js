@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { AddUserToStore } from "../../../state/User/userAction";
 import UserComponent from "./UserComponent.jsx";
 
+// import AdminComponent from "./AdminComponent.jsx";
+// let globalCondition = "If We need to show admin login"
 
 let mapStateToProps = (store) => { //store is the redux states
     return {
@@ -21,6 +23,7 @@ let mapDispatchToProps = (dispatch)=>{
     }
 }
 
+//export default connect(mapStateToProps, mapDispatchToProps)(globalCondition ? UserComponent : AdminComponent)    
 
 //connect accepts - mapStateToProps - for subscribing and mapDispatchToProps - for publishing
 export default connect(mapStateToProps, mapDispatchToProps)(UserComponent)
