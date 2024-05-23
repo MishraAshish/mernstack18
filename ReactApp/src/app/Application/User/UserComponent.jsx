@@ -39,7 +39,9 @@ export default class UserComponent extends Component{
         alert("Logged Innn -"+JSON.stringify(newUser))
 
         //upon user action to login we send user to store
-        this.props.addUser(newUser);
+        //this.props.addUser(newUser);
+        
+        this.props.loginUser(newUser) //will go to usercontainer => useraction => server(db) => store => userreducer
 
         evt.preventDefault();
     }
