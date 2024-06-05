@@ -8,12 +8,14 @@ const cors = require("cors")
 const defaultRouter = require("./Routers/defaultRoute")
 const adminRouter = require("./Routers/adminRoute")
 const userRouter = require("./Routers/userRoute")
+const productRouter = require("./Routers/productRoute")
 
 global.rootDir = __dirname;
 
 //we can have one main and multiple other express apps at a place
 const adminApp = express(); // a new express app to handle requests mounted with admin in path
 const userApp = express();
+const productApp = express();
 
 app.use(cors()) //enabling cross origin resource sharing at root level
 //setting up the middleware static to handle all the static files we need to serve to client
@@ -31,6 +33,9 @@ adminApp.use(adminRouter)
 //api path signinup => localhost:9000/user/api/signinup
 app.use("/user", userApp)
 userApp.use(userRouter)
+
+app.use("/product", productApp)
+productApp.use(productRouter)
 
 app.use("/",defaultRouter)
 

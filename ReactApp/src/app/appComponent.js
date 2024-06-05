@@ -8,8 +8,9 @@ import Footer from "./Common/FooterComponent";
 import Header from "./Common/HeaderComponent";
 import About from "./Common/AboutComponent";
 import NotFound from "./Common/NotFoundComponent";
-import UserComponent from "./Application/User/UserContainer";
+// import UserComponent from "./Application/User/UserContainer";
 import UserHook from "./Application/User/UserHookComponent";
+import ProductComponent from "./Application/Product/ProductComponent";
 
 export default class ApplicationComponent extends Component {
 
@@ -60,6 +61,8 @@ export default class ApplicationComponent extends Component {
                             updateNameInParent={this.updateName} />}/>
                     {/* <Route path="user" element={<UserComponent />}/> */}
                     <Route path="user" element={<UserHook />}/>
+                    <Route path="product" element={<ProductComponent />}/>
+                    <Route path="cart" element={<NotFound />}/>
                     <Route path="about" element={<About />}/>
                     <Route path="about/:id" element={<About />}/>
                     <Route path="*" element={<NotFound />}/>                    

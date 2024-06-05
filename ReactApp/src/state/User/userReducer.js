@@ -3,10 +3,10 @@ import * as actionTypes from "../actionTypes";
 
 let initialState = {
     user : {
-        userName : "Dummy",
-        password : "asdsadasda",
-        street : "somewhere on earth",
-        mobile :898989898
+        userName : "",
+        password : "",
+        street : "",
+        mobile :0
     }
 }
 
