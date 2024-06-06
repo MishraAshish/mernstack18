@@ -51,23 +51,23 @@ let UserHook = (props)=>{
     //when first rendering is done and UI can be accessed - componentDidMount
     //useeffect is the hook that we use to make it work as shouldComponentUpdate, componentDidMount, componentWillUnmount
     //using useEffect to implement componentDidMount and then add the value to ref element
-    useEffect(()=>{
-        console.log("Re render happend")
+    // useEffect(()=>{
+    //     console.log("Re render happend")
 
-        sessionName.current.value = User.userName
+    //     sessionName.current.value = User.userName
     
-        //componentWillUnmount
-        return ()=>{
-            //clear intervals, api subscription etc that should be removed before we move to next component
-            console.log("Makes use effect to work for componentWillUnmount")
-        }
-    },[]) //if we pass an object to initialize it works as componentDidMount, and executes in create LC, else works as shouldComponent Update
+    //     //componentWillUnmount
+    //     return ()=>{
+    //         //clear intervals, api subscription etc that should be removed before we move to next component
+    //         console.log("Makes use effect to work for componentWillUnmount")
+    //     }
+    // },[]) //if we pass an object to initialize it works as componentDidMount, and executes in create LC, else works as shouldComponent Update
 
-    let readFormData = (evt)=>{
-        alert(sessionName.current.value)
-        //can be dispatched data back to the store or db
-        evt.preventDefault()
-    }
+    // let readFormData = (evt)=>{
+    //     alert(sessionName.current.value)
+    //     //can be dispatched data back to the store or db
+    //     evt.preventDefault()
+    // }
 
     return(
         <>
@@ -105,8 +105,8 @@ let UserHook = (props)=>{
                 </div>
             </section>
 
-        {/* uncontrolled way by using ref keyword */}
-            <form className={"form col-md-10 userHook"} onSubmit={readFormData}>                
+            {/* uncontrolled way by using ref keyword */}
+            {/* <form className={"form col-md-10 userHook"} onSubmit={readFormData}>                
                 <label>
                     <b>User Name :</b>
                     <input type="text" className={"form-control col-md-12"} ref={sessionName}
@@ -120,7 +120,7 @@ let UserHook = (props)=>{
                     </label>
                     <br/>
                 <input type="submit" className={"btn btn-primary"} value="Signin" />
-            </form> 
+            </form>  */}
 
         </>
     )

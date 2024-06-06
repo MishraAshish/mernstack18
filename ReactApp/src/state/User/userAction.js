@@ -1,6 +1,7 @@
 //action - is an object with two properties - type and payload
 import * as actionTypes from "../actionTypes";
 import axios from "axios";
+import { getUserCart } from "../Cart/cartAction";
 
 export const AddUserToStore = (user)=>{
     return {
@@ -19,6 +20,7 @@ export const SaveUserToDB = (newUser)=>{
                 let loggedUser = collection.data
                 console.log(loggedUser)
                 dispatch(AddUserToStore(loggedUser))
+                dispatch(getUserCart(userData._id))
             }).catch((err)=>{
                 console.log("error while logging in ", err)
         })
@@ -40,6 +42,7 @@ export const SaveUserToDBUsingFetch = (newUser)=>{
             .then((userData)=>{
                 console.log(userData)
                 dispatch(AddUserToStore(userData))
+                dispatch(getUserCart(userData._id))
             }).catch((err)=>{
                 console.log("error while logging in ", err)
         })
