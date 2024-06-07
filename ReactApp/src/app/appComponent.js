@@ -54,7 +54,8 @@ export default class ApplicationComponent extends Component {
             <Router>
                 <div className="topdiv">
                 {/* <b>userName : {this.state.name}</b> */}
-                <Header userName={this.state.name}/>
+                {/* <Header userName={this.state.name}/> */}
+                <Header />
                 <Routes>
                     <Route path="/" element={<Home  parentName1={this.state.name} 
                             updateNameInParent={this.updateName} />}/>

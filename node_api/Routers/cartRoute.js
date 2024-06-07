@@ -25,7 +25,7 @@ router.post("/api/saveUserCart",(req, res)=>{
                     .then((data)=>{        
                          setTimeout(()=>{
                             res.json(data);
-                        },3000)                        
+                        },10000)                        
                     })
                     .catch((err)=>{
                         res.send("Error Occurred"+ err);
