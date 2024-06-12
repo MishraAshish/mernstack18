@@ -1,3 +1,8 @@
+// 12-06-2024 - Reorder Page
+// Reorder
+// User to reorder from recent orders or from cancelled orders
+// A Simple process just add the order to your cart and replace or merge whatever is present in cart
+
 // 11-06-2024 - Recentorder Page 
 // Upon MakePayment Click
 // Save the cart to RecentOrders collection (should have userid, order, dateTime)
@@ -8,7 +13,6 @@
 
 
 // 10-06-2024 - Coupon Page
-
 // Coupon Page 
 // Create a component with Name - CouponComponent (Functional Component and Use Hooks)
 // On the page add a Button - GenerateCoupon
