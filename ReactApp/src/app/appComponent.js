@@ -12,6 +12,7 @@ import NotFound from "./Common/NotFoundComponent";
 import UserHook from "./Application/User/UserHookComponent";
 import ProductComponent from "./Application/Product/ProductComponent";
 import CartComponent from "./Application/Cart/CartComponent";
+import UnderstandingHooks from "./Hooks/UnderstandingHooks";
 
 export default class ApplicationComponent extends Component {
 
@@ -66,6 +67,7 @@ export default class ApplicationComponent extends Component {
                     <Route path="product" element={<ProductComponent />}/>
                     <Route path="cart" element={<CartComponent />}/>
                     <Route path="about" element={<About />}/>
+                    <Route path="hooks" element={<UnderstandingHooks />}/>
                     <Route path="about/:id" element={<About />}/>
                     <Route path="*" element={<NotFound />}/>                    
                 </Routes>
