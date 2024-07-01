@@ -1,18 +1,18 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
 import "./test.css";
 import "./app.css";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 // import TestComponent from "./CommonComponent/test";
-import Home from "./Common/HomeComponent";
-import Footer from "./Common/FooterComponent";
-import Header from "./Common/HeaderComponent";
-import About from "./Common/AboutComponent";
-import NotFound from "./Common/NotFoundComponent";
+let Home = lazy(()=> import("./Common/HomeComponent"));
+let Footer = lazy(()=> import("./Common/FooterComponent"));
+let Header = lazy(()=> import("./Common/HeaderComponent"));
+let About = lazy(()=> import("./Common/AboutComponent"));
+let NotFound = lazy(()=> import("./Common/NotFoundComponent"));
 // import UserComponent from "./Application/User/UserContainer";
-import UserHook from "./Application/User/UserHookComponent";
-import ProductComponent from "./Application/Product/ProductComponent";
-import CartComponent from "./Application/Cart/CartComponent";
-import UnderstandingHooks from "./Hooks/UnderstandingHooks";
+let UserHook = lazy(()=> import("./Application/User/UserHookComponent"));
+let ProductComponent = lazy(()=> import("./Application/Product/ProductComponent"));
+let CartComponent = lazy(()=> import("./Application/Cart/CartComponent"));
+let UnderstandingHooks = lazy(()=> import("./Hooks/UnderstandingHooks"));
 
 export default class ApplicationComponent extends Component {
 
@@ -54,24 +54,26 @@ export default class ApplicationComponent extends Component {
         return(
             <Router>
                 <div className="topdiv">
-                {/* <b>userName : {this.state.name}</b> */}
-                {/* <Header userName={this.state.name}/> */}
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home  parentName1={this.state.name} 
-                            updateNameInParent={this.updateName} />}/>
-                    <Route path="home" element={<Home  parentName1={this.state.name}
-                            updateNameInParent={this.updateName} />}/>
-                    {/* <Route path="user" element={<UserComponent />}/> */}
-                    <Route path="user" element={<UserHook />}/>
-                    <Route path="product" element={<ProductComponent />}/>
-                    <Route path="cart" element={<CartComponent />}/>
-                    <Route path="about" element={<About />}/>
-                    <Route path="hooks" element={<UnderstandingHooks />}/>
-                    <Route path="about/:id" element={<About />}/>
-                    <Route path="*" element={<NotFound />}/>                    
-                </Routes>
-                <Footer/> 
+                <Suspense fallback={<div>Loading...</div>}>
+                    {/* <b>userName : {this.state.name}</b> */}
+                    {/* <Header userName={this.state.name}/> */}
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<Home  parentName1={this.state.name} 
+                                updateNameInParent={this.updateName} />}/>
+                        <Route path="home" element={<Home  parentName1={this.state.name}
+                                updateNameInParent={this.updateName} />}/>
+                        {/* <Route path="user" element={<UserComponent />}/> */}
+                        <Route path="user" element={<UserHook />}/>
+                        <Route path="product" element={<ProductComponent />}/>
+                        <Route path="cart" element={<CartComponent />}/>
+                        <Route path="about" element={<About />}/>
+                        <Route path="hooks" element={<UnderstandingHooks />}/>
+                        <Route path="about/:id" element={<About />}/>
+                        <Route path="*" element={<NotFound />}/>                    
+                    </Routes>
+                    <Footer/> 
+                </Suspense>
                 </div>
             </Router>
         )
